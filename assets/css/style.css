@@ -281,6 +281,7 @@ img{
 .work_img img{
   transition: 1s;
   cursor: pointer;
+  height: 100% !important;
 }
 .work_img img:hover{
   transform: scale(1.1);

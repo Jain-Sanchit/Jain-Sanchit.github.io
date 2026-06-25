@@ -1,0 +1,58 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const homepageSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: SITE_TITLE,
+	description: SITE_DESCRIPTION,
+	url: Astro.site?.toString(),
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} — Honest forex card & travel reviews`} description={SITE_DESCRIPTION} schema={homepageSchema} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Real travel & forex card reviews from real trips</h1>
+			<p>
+				I'm Sanchit, an Indian traveler who has used cards like Niyo Global and the
+				Scapia Federal Credit Card across Japan, the UK, Indonesia, Malaysia, Singapore, Thailand,
+				and more. Every review on this site is based on my own statements, transactions, and
+				airport redemptions — not affiliate sales pitches.
+			</p>
+
+			<h2>Start here</h2>
+			<ul>
+				<li>
+					<a href="/blog/niyo-vs-scapia-card/">Niyo vs Scapia: I used both across 7+ countries — honest 2026 comparison</a>
+				</li>
+				<li>
+					<a href="/blog/scapia-japan-iphone/">How I used Scapia in Japan to save ₹35,000 on an iPhone 17 Pro</a>
+				</li>
+				<li>
+					<a href="/blog/scapia-bali-atm/">Scapia in Bali: ATM withdrawal vs cash exchange — which was cheaper?</a>
+				</li>
+				<li>
+					<a href="/blog/scapia-airport-privileges/">Scapia airport privileges: everything I actually redeemed in 2026</a>
+				</li>
+			</ul>
+
+			<h2>Why trust these reviews?</h2>
+			<p>
+				Most "best forex credit card" lists are written by affiliate writers who have never
+				swiped the card. I write from my own statements: real spend, real markup, real
+				rejections at the POS, real customer support stories. If a card disappointed me, I'll
+				say so.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
